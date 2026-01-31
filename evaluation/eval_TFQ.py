@@ -137,7 +137,6 @@ def main():
     file_path = 'evaluation/TFQ/eval_result.json'
     results = evaluate_accuracy(file_path)
 
-    print(f"Individual pass@1 accuracy: {results['Accuracy']:.2%} ({results['Correct']}/{results['Total']})")
     print(f"Group-level accuracy: {results['Group_Accuracy']:.2%} ({results['Group_Correct']}/{results['Total_Groups']})")
     print(f"Number of empty answers: {results['Empty_Answers']}/{results['Total']}")
     print(f"Number of incorrect answers: {results['Total'] - results['Correct'] - results['Empty_Answers']}/{results['Total']}")
@@ -176,7 +175,6 @@ def main():
     with open(output_txt_path, 'w', encoding='utf-8') as f:
         f.write(f"Model Evaluation Results\n")
         f.write(f"========================\n\n")
-        f.write(f"Individual pass@1 accuracy: {results['Accuracy']:.2%} ({results['Correct']}/{results['Total']})\n")
         f.write(f"Group-level accuracy (all cases in group must be correct): {results['Group_Accuracy']:.2%} ({results['Group_Correct']}/{results['Total_Groups']})\n")
         f.write(f"Number of empty answers: {results['Empty_Answers']}/{results['Total']} ({results['Empty_Answers']/results['Total']:.2%})\n")
         f.write(f"Number of incorrect answers: {results['Total'] - results['Correct'] - results['Empty_Answers']}/{results['Total']}\n\n")

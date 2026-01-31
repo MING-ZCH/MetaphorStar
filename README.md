@@ -7,7 +7,7 @@
 [![arXiv](https://img.shields.io/badge/arXiv-XXXX.XXXXX-b31b1b.svg)](https://arxiv.org/abs/XXXX.XXXXX)
 [![HuggingFace Models](https://img.shields.io/badge/🤗%20HuggingFace-Models-yellow)](https://huggingface.co/collections/MING-ZCH/metaphorstar)
 [![Dataset](https://img.shields.io/badge/🤗%20HuggingFace-Dataset-green)](https://huggingface.co/datasets/MING-ZCH/TFQ-Data)
-[![Benchmark](https://img.shields.io/badge/🤗%20HuggingFace-Dataset-green)](https://huggingface.co/datasets/MING-ZCH/TFQ-Bench)
+[![Benchmark](https://img.shields.io/badge/🤗%20HuggingFace-Benchmark-orange)](https://huggingface.co/datasets/MING-ZCH/TFQ-Bench)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
 [Paper](#) | [Models](https://huggingface.co/collections/MING-ZCH/metaphorstar) | [Dataset](https://huggingface.co/datasets/MING-ZCH/TFQ-Data) | [Benchmark](https://huggingface.co/datasets/MING-ZCH/TFQ-Bench)
@@ -218,7 +218,7 @@ We release a series of models trained with our framework.
 | **MetaphorStar-7B** | Qwen2.5-VL-7B | TFQ-GRPO | 7B | [HuggingFace](https://huggingface.co/MING-ZCH/MetaphorStar-7B) |
 | **MetaphorStar-32B** | Qwen2.5-VL-32B | TFQ-GRPO | 32B | [HuggingFace](https://huggingface.co/MING-ZCH/MetaphorStar-32B) |
 
-*Note: Models are fine-tuned on TFQ-Data via TFQ-GRPO.*
+*Note: For detailed training protocols, please refer to [train](train/).*
 
 ## Evaluation
 
