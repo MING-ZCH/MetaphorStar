@@ -4,27 +4,39 @@
 
 **Image Metaphor Understanding and Reasoning with End-to-End Visual Reinforcement Learning**
 
-[![arXiv](https://img.shields.io/badge/arXiv-XXXX.XXXXX-b31b1b.svg)](https://arxiv.org/abs/XXXX.XXXXX)
-[![HuggingFace Models](https://img.shields.io/badge/🤗%20HuggingFace-Models-yellow)](https://huggingface.co/collections/MING-ZCH/metaphorstar)
-[![Dataset](https://img.shields.io/badge/🤗%20HuggingFace-Dataset-green)](https://huggingface.co/datasets/MING-ZCH/TFQ-Data)
-[![Benchmark](https://img.shields.io/badge/🤗%20HuggingFace-Benchmark-orange)](https://huggingface.co/datasets/MING-ZCH/TFQ-Bench)
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
-
-[Paper](#) | [Models](https://huggingface.co/collections/MING-ZCH/metaphorstar) | [Dataset](https://huggingface.co/datasets/MING-ZCH/TFQ-Data) | [Benchmark](https://huggingface.co/datasets/MING-ZCH/TFQ-Bench)
+<p align="center">
+  <a href="https://arxiv.org/abs/XXXX.XXXXX">
+    <img src="https://img.shields.io/badge/arXiv-XXXX.XXXXX-b31b1b.svg" alt="arXiv" />
+  </a>
+  <a href="https://metaphorstar.github.io/">
+    <img src="https://img.shields.io/badge/🌐%20Homepage-blue" alt="Project Homepage" />
+  </a>
+  <a href="https://huggingface.co/collections/MING-ZCH/metaphorstar">
+    <img src="https://img.shields.io/badge/🤗%20HuggingFace-Models-yellow" alt="Models" />
+  </a>
+  <a href="https://huggingface.co/collections/MING-ZCH/metaphorstar">
+    <img src="https://img.shields.io/badge/🤗%20HuggingFace-Dataset-green" alt="Dataset" />
+  </a>
+  <a href="https://huggingface.co/collections/MING-ZCH/metaphorstar">
+    <img src="https://img.shields.io/badge/🤗%20HuggingFace-Benchmark-orange" alt="Benchmark" />
+  </a>
+</p>
 
 </div>
 
 ---
 
 ## 🔥News
+
 <!-- - **[Feb. 2026]**: Our paper has released on [arXiv](https://arxiv.org/abs/2505.17019) , check it out! -->
+
 - **[Jan. 2026]**: Our code and dataset have been released!
 
 ## ✨ Highlights
 
 - 🎯 **First Visual RL Framework for Image Metaphors**: End-to-end reinforcement learning approach specifically designed for image implication understanding
 - 📊 **Large-Scale Dataset & Benchmark**: TFQ-Data with 14k high-quality training samples (cartoons, ads, art, memes, etc.) + TFQ-Bench for rigorous evaluation across diverse metaphorical images
-- 🏆 **State-of-the-Art Performance**: Outperforms GPT-4.1 and Claude-4.0-Sonnet on multiple benchmarks
+- 🏆 **State-of-the-Art Performance**: Outperforms Gemini-3.0-Pro on multiple benchmarks
 - 🚀 **82.6% Improvement**: Massive accuracy gains on TFQ tasks compared to base models
 - 🧠 **Enhanced General Reasoning**: Improves performance on general vision benchmarks (MMBench, MathVista, MMVet) - metaphor understanding as cognitive training
 - 🔓 **Fully Open-Source**: Models (3B, 7B, 32B), training/evaluation datasets, and complete codebase all publicly available
@@ -45,7 +57,7 @@
 
 Metaphorical comprehension in images remains a critical challenge for Nowadays AI systems. While Multimodal Large Language Models (MLLMs) excel at basic Visual Question Answering (VQA), they consistently struggle to grasp the nuanced cultural, emotional, and contextual implications embedded in visual content. This difficulty stems from the task's demand for sophisticated multi-hop reasoning, cultural context, and Theory of Mind (ToM) capabilities, which current models lack. To fill this gap, we propose **MetaphorStar**, the first end-to-end visual reinforcement learning (RL) framework for image implication tasks. Our framework includes three core components: the fine-grained dataset **TFQ-Data**, the visual RL method **TFQ-GRPO**, and the well-structured benchmark **TFQ-Bench**.
 
-Our fully open-source MetaphorStar family, trained using TFQ-GRPO on TFQ-Data, significantly improves performance by an average of 82.6% on the image implication benchmarks. Compared with 20+ mainstream MLLMs, MetaphorStar-32B achieves state-of-the-art (SOTA) results on True-False Question and Open-Style Question, and significantly outperforms top closed-source models GPT-4.1 and Claude-4.0-Sonnet on Multiple-Choice Question. Crucially, our experiments reveal that learning image implication tasks improves the general understanding ability, especially the complex visual reasoning ability. We further provide a systematic analysis of model parameter scaling, training data scaling, and the impact of different model architectures and training strategies, demonstrating the broad applicability of our method.
+Our fully open-source MetaphorStar family, trained using TFQ-GRPO on TFQ-Data, significantly improves performance by an average of 82.6% on the image implication benchmarks. Compared with 20+ mainstream MLLMs, MetaphorStar-32B achieves state-of-the-art (SOTA) on Multiple-Choice Question and Open-Style Question, significantly outperforms the top closed-source model Gemini-3.0-pro on True-False Question. Crucially, our experiments reveal that learning image implication tasks improves the general understanding ability, especially the complex visual reasoning ability. We further provide a systematic analysis of model parameter scaling, training data scaling, and the impact of different model architectures and training strategies, demonstrating the broad applicability of our method.
 
 ## Motivation
 
@@ -56,9 +68,11 @@ Understanding visual metaphors represents the pinnacle of visual intelligence. W
 **1. The Multi-Hop Reasoning Gap**
 
 Image metaphor understanding demands complex cognitive chains:
+
 ```
 Visual Elements → Symbolic Recognition → Metaphorical Mapping → Cultural Context → Emotional Resonance → Deep Implication
 ```
+
 Standard Supervised Fine-Tuning (SFT) proves insufficient for teaching this intricate reasoning process, as it primarily optimizes for output correctness rather than reasoning quality.
 
 **2. Why Reinforcement Learning?**
@@ -93,24 +107,27 @@ Our analysis reveals a clear spectrum of challenges. While MCQ provides stable, 
 
 As summarized below, the three formats offer complementary evaluation capabilities. We analyze them across three key dimensions essential for Reinforcement Learning:
 
-| Dimension | TFQ | MCQ | OSQ |
-|:----------|:---:|:---:|:---:|
+| Dimension                   |  TFQ  | MCQ | OSQ |
+| :-------------------------- | :----: | :--: | :-: |
 | **Knowledge Density** | ⭐⭐⭐ | ⭐⭐ | ⭐ |
-| **Learnability** | ⭐⭐⭐ | ⭐⭐ | ⭐ |
-| **Verifiability** | ⭐⭐⭐ | ⭐⭐ | ⭐ |
+| **Learnability**      | ⭐⭐⭐ | ⭐⭐ | ⭐ |
+| **Verifiability**     | ⭐⭐⭐ | ⭐⭐ | ⭐ |
 
 **1. Knowledge Density** (⭐⭐⭐ Highest)
+
 - TFQ evaluates multiple distinct propositions per image (5-10 questions/image)
 - Forces models to verify comprehensive factual and inferential points
 - Provides **3-5× denser supervision** compared to single-answer MCQ/OSQ
 
 **2. Learnability** (⭐⭐⭐ Highest)
+
 - **Clear gradient signal**: Binary outcomes eliminate noisy reward estimation
 - **Lower sample complexity**: Each image yields multiple training signals
 - **Reduced search space**: Avoids the complex open-ended generation space of OSQ
 - Enables efficient policy optimization even with limited data
 
 **3. Verifiability** (⭐⭐⭐ Highest)
+
 - **Definitive binary ground truth** (True/False) eliminates subjective ambiguity
 - **Objective evaluation**: No reliance on model-based judges or human raters
 - **Deterministic rewards**: $r=1$ for correct, $r=0$ for incorrect—critical for RL stability
@@ -135,6 +152,7 @@ We construct a large-scale, high-quality dataset and benchmark to operationalize
 To construct our dataset, we leverage 1,434 high-quality metaphorical images from the [II-Bench](https://github.com/II-Bench/II-Bench). Using GPT-4.1, we generate comprehensive True-False Questions with the following process:
 
 **Generation Pipeline:**
+
 - **Input**: For each image, provide detailed textual description + ground-truth implication
 - **Output**: 5-10 QA pairs per image with definitive True/False answers
 - **Total Scale**: 14,099 questions across 1,434 images
@@ -142,13 +160,14 @@ To construct our dataset, we leverage 1,434 high-quality metaphorical images fro
 **Design Principles:**
 
 1. **Comprehensive Coverage**: Each TFQ is a proposition evaluating understanding of key image content related to the central metaphor
-
 2. **Beyond Implication**: Questions probe not only the deep implication but also primary visual information (similar to basic VQA tasks)
+3. **Hierarchical Difficulty**:
 
-3. **Hierarchical Difficulty**: 
    - False statements are crafted as plausible distractors
    - True statements are clearly grounded in visual/contextual evidence
    - Difficulty levels range from surface-level to deep reasoning
+
+*Note: For detailed generation protocols, please refer to [dataset](dataset/).*
 
 #### Dataset and Benchmark Splits
 
@@ -163,7 +182,7 @@ We partition the total collection into dedicated training (TFQ-Data) and evaluat
 
 **TFQ-Bench (Evaluation Set)**
 
-- **TFQ-Bench-Full**: Complete benchmark with 1,434 images and 14,099 questions  
+- **TFQ-Bench-Full**: Complete benchmark with 1,434 images and 14,099 questions
 - **TFQ-Bench-Lite**: Efficient test set with 50 representative images and 492 questions for concise evaluation
 - **Critical Property**: TFQ-Bench-Lite is strictly disjoint from TFQ-Data-Full, ensuring rigorous out-of-distribution evaluation
 
@@ -174,6 +193,7 @@ We propose **TFQ-GRPO** (Group Relative Policy Optimization for True-False Quest
 **Core Design Principles:**
 
 **1. Structured Output Format**
+
 - Enforce strict output structure: `<think> [reasoning] </think> <answer> [True/False] </answer>`
 - Separates reasoning process from final judgment
 - Enables independent evaluation of reasoning quality and answer correctness
@@ -182,15 +202,19 @@ We propose **TFQ-GRPO** (Group Relative Policy Optimization for True-False Quest
 
 Our reward function combines multiple objectives:
 
-$$R_{\text{total}} = R_{\text{accuracy}} + \lambda_{\text{format}} \cdot R_{\text{format}}$$
+$$
+R_{\text{total}} = R_{\text{accuracy}} + \lambda_{\text{format}} \cdot R_{\text{format}}
+$$
 
 Where:
+
 - **Accuracy Reward** ($R_{\text{accuracy}}$):
+
   - $+1$ for correct answer
   - $0$ for incorrect answer
   - Primary signal for judgment correctness
-
 - **Format Reward** ($R_{\text{format}}$):
+
   - Verifies proper XML tag structure
   - Checks presence and ordering of `<think>` and `<answer>` blocks
   - Ensures non-empty reasoning content
@@ -200,23 +224,30 @@ Where:
 
 - **Sampling Strategy**: For each (image, question) pair, sample $K$ diverse outputs
 - **Baseline Estimation**: Compute group average reward as baseline
-  $$b = \frac{1}{K} \sum_{i=1}^{K} R_i$$
 
+  $$
+  b = \frac{1}{K} \sum_{i=1}^{K} R_i
+  $$
 - **Relative Advantage**: Calculate advantage for each output
-  $$A_i = R_i - b$$
 
+  $$
+  A_i = R_i - b
+  $$
 - **Policy Update**: Optimize policy to increase probability of high-advantage outputs
-  $$\mathcal{L}_{\text{GRPO}} = -\mathbb{E}_{(x,y) \sim D} \left[ \sum_{i=1}^{K} A_i \cdot \log \pi_{\theta}(y_i | x) \right]$$
+
+  $$
+  \mathcal{L}_{\text{GRPO}} = -\mathbb{E}_{(x,y) \sim D} \left[ \sum_{i=1}^{K} A_i \cdot \log \pi_{\theta}(y_i | x) \right]
+  $$
 
 ## MetaphorStar Model Family
 
 We release a series of models trained with our framework.
 
-| Model | Base Model | Method | Size | Link |
-| :--- | :--- | :--- | :--- | :--- |
-| **MetaphorStar-3B** | Qwen2.5-VL-3B | TFQ-GRPO | 3B | [HuggingFace](https://huggingface.co/MING-ZCH/MetaphorStar-3B) |
-| **MetaphorStar-7B** | Qwen2.5-VL-7B | TFQ-GRPO | 7B | [HuggingFace](https://huggingface.co/MING-ZCH/MetaphorStar-7B) |
-| **MetaphorStar-32B** | Qwen2.5-VL-32B | TFQ-GRPO | 32B | [HuggingFace](https://huggingface.co/MING-ZCH/MetaphorStar-32B) |
+| Model                      | Base Model     | Method   | Size | Link                                                         |
+| :------------------------- | :------------- | :------- | :--- | :----------------------------------------------------------- |
+| **MetaphorStar-3B**  | Qwen2.5-VL-3B  | TFQ-GRPO | 3B   | [HuggingFace](https://huggingface.co/MING-ZCH/MetaphorStar-3B)  |
+| **MetaphorStar-7B**  | Qwen2.5-VL-7B  | TFQ-GRPO | 7B   | [HuggingFace](https://huggingface.co/MING-ZCH/MetaphorStar-7B)  |
+| **MetaphorStar-32B** | Qwen2.5-VL-32B | TFQ-GRPO | 32B  | [HuggingFace](https://huggingface.co/MING-ZCH/MetaphorStar-32B) |
 
 *Note: For detailed training protocols, please refer to [train](train/).*
 
@@ -229,6 +260,7 @@ We conduct comprehensive evaluation across three complementary task formats: **T
 TFQ requires models to judge whether a given statement about an image is True or False. Each image is accompanied by 5-10 statements covering both surface-level visual information and deep metaphorical implications. Models must provide explicit reasoning in `<think>...</think>` tags before giving binary answers.
 
 **Evaluation Setup:**
+
 - **Benchmark**: TFQ-Bench (1,434 images, 14,099 questions)
 - **Metric**: Binary classification accuracy
 
@@ -237,6 +269,7 @@ TFQ requires models to judge whether a given statement about an image is True or
 MCQ presents models with the question "What is the implication in this image?" and six candidate options, where only one answer is correct. This format tests the model's ability to select the most appropriate interpretation from a constrained set of choices.
 
 **Evaluation Setup:**
+
 - **Benchmark**: High-level Bench (50 curated high-quality images)
 - **Format**: 6-option selection per image
 - **Metric**: Selection accuracy
@@ -249,6 +282,7 @@ MCQ presents models with the question "What is the implication in this image?" a
 OSQ represents the upper bound of task difficulty, requiring models to generate free-form responses to "What is the implication in this image?" without pre-defined answer constraints. This evaluates comprehensive interpretation capabilities.
 
 **Evaluation Setup:**
+
 - **Benchmark**: High-level Bench (50 curated high-quality images)
 - **Evaluator**: GPT-4o with our 5-dimensional metric (***Surface-level Information***, ***Emotional Expression***, ***Domain and Context***, ***Rhetorical Skills***, and ***Deep Implications***)
 - **Validation**: Human consistency checks (98.7% agreement with GPT-4o scores)
@@ -262,10 +296,11 @@ OSQ represents the upper bound of task difficulty, requiring models to generate 
 ### Main Experiment
 
 **State-of-the-Art Performance:** MetaphorStar-32B achieves SOTA on all major benchmarks.
-*   **TFQ:** We outperform GPT-4.1 and Claude-4.0-Sonnet, demonstrating superior discriminative visual reasoning.
-*   **MCQ:** Our model surpasses open-source models (like LLaVA-OneVision) and rivals closed-source giants.
-*   **OSQ:** The rich reasoning patterns learned via RL transfer directly to generation tasks, producing deeper and more culturally 
-aware interpretations.
+
+* **TFQ:** We outperform Gemini-3.0-Pro, demonstrating superior discriminative visual reasoning.
+* **MCQ:** Our model surpasses open-source models and rivals closed-source giants.
+* **OSQ:** The rich reasoning patterns learned via RL transfer directly to generation tasks, producing deeper and more culturally
+  aware interpretations.
 
 ![Main Results](assets/Main_results.png)
 
@@ -281,16 +316,19 @@ We evaluated MetaphorStar on general benchmarks (MMBench, MathVista, MMVet). The
 We conduct comprehensive ablation studies to validate our design choices and understand the factors contributing to MetaphorStar's success. Our analysis covers four critical dimensions: model scale, data scale, architectural choices, and training strategies.
 
 ### 1. Model Parameter Scaling
+
 We observed consistent performance gains scaling from 3B to 32B. Larger models benefit more significantly from the RL stage, showing emergent reasoning capabilities with longer CoT paths.
 
 ![Model Scaling](assets/Model_Scaling.png)
 
 ### 2. Training Data Scaling
+
 Scaling TFQ-Data from 1k to 14k samples shows a log-linear improvement in reasoning accuracy. The diversity of the dataset (covering politics, art, humor) is crucial for preventing overfitting to specific visual styles.
 
 ![Data Scaling](assets/Data_Scaling.png)
 
 ### 3. Different Model Architecture
+
 We validated our framework across LLaVA architectures. TFQ-GRPO proves to be model-agnostic, consistently improving the reasoning baseline of different backbones.
 
 ![Different Architecture](assets/Different_Architecture.png)
@@ -314,6 +352,7 @@ Counterintuitively, **SFT warmup actively harms performance**. End-to-end RL (TF
 **Technical Explanation: Entropy Collapse**
 
 Token entropy analysis reveals the mechanism:
+
 - **Base Model** (1.33): High exploration capacity
 - **End-to-end RL** (1.23): Maintains broad solution space
 - **SFT** (0.30): Severe entropy collapse—behavioral cloning traps model in narrow distribution
@@ -331,7 +370,7 @@ Token entropy analysis reveals the mechanism:
 2. **Entropy preservation is critical**: End-to-end RL leverages high initial entropy for global optimization
 3. **On-policy RL cannot escape SFT-induced local optima**: Once entropy collapses, recovery is impossible
 4. **Task-specific optimization matters**: Direct reward-based training outperforms behavioral cloning for creative reasoning
-   
+
 ![Different Training Strategy](assets/Different_Training_Strategy.png)
 
 ## Citation
@@ -363,6 +402,6 @@ We sincerely thank the following projects and teams for their valuable contribut
 ## Contact
 
 For questions, issues, or collaboration opportunities, please:
+
 - Open an issue on GitHub
 - Contact: [MING-ZCH](https://github.com/MING-ZCH)
-
