@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://arxiv.org/abs/2602.10575">
-    <img src="https://img.shields.io/badge/arXiv-XXXX.XXXXX-b31b1b.svg" alt="arXiv" />
+    <img src="https://img.shields.io/badge/arXiv-2602.10575-b31b1b.svg" alt="arXiv" />
   </a>
   <a href="https://metaphorstar.github.io/">
     <img src="https://img.shields.io/badge/🌐%20Homepage-blue" alt="Project Homepage" />
