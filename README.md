@@ -5,7 +5,7 @@
 **Image Metaphor Understanding and Reasoning with End-to-End Visual Reinforcement Learning**
 
 <p align="center">
-  <a href="https://arxiv.org/abs/XXXX.XXXXX">
+  <a href="https://arxiv.org/abs/2602.10575">
     <img src="https://img.shields.io/badge/arXiv-XXXX.XXXXX-b31b1b.svg" alt="arXiv" />
   </a>
   <a href="https://metaphorstar.github.io/">
@@ -28,7 +28,7 @@
 
 ## 🔥News
 
-<!-- - **[Feb. 2026]**: Our paper has released on [arXiv](https://arxiv.org/abs/2505.17019) , check it out! -->
+- **[Feb. 2026]**: Our paper has released on [arXiv](https://arxiv.org/abs/2602.10575) , check it out!
 
 - **[Jan. 2026]**: Our code and dataset have been released!
 
@@ -381,7 +381,7 @@ If you find our work helpful in your research, please cite the following paper:
 @article{zhang2026metaphorstar,
   title={MetaphorStar: Image Metaphor Understanding and Reasoning with End-to-End Visual Reinforcement Learning}, 
   author={Chenhao Zhang, Yazhe Niu and Hongsheng Li},
-  journal={arXiv preprint arXiv:xxx},
+  journal={arXiv preprint arXiv:2602.10575},
   year={2026}
 }
 ```
