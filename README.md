@@ -36,7 +36,7 @@
 
 - 🎯 **First Visual RL Framework for Image Metaphors**: End-to-end reinforcement learning approach specifically designed for image implication understanding
 - 📊 **Large-Scale Dataset & Benchmark**: TFQ-Data with 14k high-quality training samples (cartoons, ads, art, memes, etc.) + TFQ-Bench for rigorous evaluation across diverse metaphorical images
-- 🏆 **State-of-the-Art Performance**: Outperforms Gemini-3.0-Pro on multiple benchmarks
+- 🏆 **State-of-the-Art Performance**: Outperforms Gemini-3.0-Pro on multiple image implication benchmarks
 - 🚀 **82.6% Improvement**: Massive accuracy gains on TFQ tasks compared to base models
 - 🧠 **Enhanced General Reasoning**: Improves performance on general vision benchmarks (MMBench, MathVista, MMVet) - metaphor understanding as cognitive training
 - 🔓 **Fully Open-Source**: Models (3B, 7B, 32B), training/evaluation datasets, and complete codebase all publicly available
@@ -262,7 +262,7 @@ TFQ requires models to judge whether a given statement about an image is True or
 **Evaluation Setup:**
 
 - **Benchmark**: TFQ-Bench (1,434 images, 14,099 questions)
-- **Metric**: Binary classification accuracy
+- **Metric**: Image-level accuracy (**all questions for a single image must be answered correctly to count that image as correct** — e.g., if an image has 10 TFQ questions, all 10 must be correct; answering 9/10 still counts as incorrect for that image)
 
 ### Multiple-Choice Question (MCQ)
 
