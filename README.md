@@ -379,10 +379,10 @@ If you find our work helpful in your research, please cite the following paper:
 
 ```bibtex
 @article{zhang2026metaphorstar,
-  title={MetaphorStar: Image Metaphor Understanding and Reasoning with End-to-End Visual Reinforcement Learning}, 
-  author={Chenhao Zhang, Yazhe Niu and Hongsheng Li},
-  journal={arXiv preprint arXiv:2602.10575},
-  year={2026}
+  title   = {{MetaphorStar}: Image Metaphor Understanding and Reasoning with End-to-End Visual Reinforcement Learning},
+  author  = {Zhang, Chenhao and Niu, Yazhe and Li, Hongsheng},
+  journal = {arXiv preprint arXiv:2602.10575},
+  year    = {2026}
 }
 ```
 
